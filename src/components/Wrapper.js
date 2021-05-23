@@ -11,9 +11,11 @@ export const Wrapper = ({setBackgroundColor, setCopied}) => {
     return (
         <div className={'wrapper'}>
             {colors.map(color => (
-                <div>
+                <div
+                    key={color.hex}
+                >
                     <Color
-                        key={color.id}
+                        key={color.name}
                         color={color}
                         setBackgroundColor={setBackgroundColor}
                     />

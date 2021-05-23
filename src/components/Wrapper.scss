@@ -1,12 +1,32 @@
 .wrapper{
   background-color: white;
   border-radius: 2rem;
-  width: 50%;
+  min-width: 50%;
+  max-width: 70vw;
   padding: 2rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: .5rem;
   justify-items: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
+}
+//Mobile short-lg optimization
+@media(max-width: 480px){
+  .wrapper{
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width: 321px){
+  .wrapper{
+    max-width: 80vw;
+    padding: 1rem
+  }
+}
+
+//Tablet optimizations
+@media(max-width: 768px) and (min-width:481px){
+  .wrapper{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
