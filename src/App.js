@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import "./App.scss";
+import { Wrapper } from "./components/Wrapper";
+import {Copied} from "./components/Copied";
+export const App = () => {
 
-function App() {
+
+    const [backgroundColor, setBackgroundColor] = useState('#FFE156');
+  const [copied, setCopied] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={'app'}
+        style={{backgroundColor: backgroundColor}}
+    >
+      <h1>Palette color picker</h1>
+      <Wrapper
+        setBackgroundColor={setBackgroundColor}
+        setCopied={setCopied}
+      />
+      {copied&& <Copied/>}
     </div>
   );
-}
-
-export default App;
+};

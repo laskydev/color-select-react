@@ -1,0 +1,12 @@
+.wrapper{
+  background-color: white;
+  border-radius: 2rem;
+  width: 50%;
+  padding: 2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: .5rem;
+  justify-items: center;
+  margin-top: 5rem;
+}
